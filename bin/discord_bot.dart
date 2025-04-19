@@ -10,7 +10,7 @@ void main() async{
     );
 
     final bot = await client.users.fetchCurrentUser();
-    print("✅ Bot is online");
+    print("✅ Bot Online");
 
     client.onMessageCreate.listen((event) async{
       if(event.mentions.contains(bot)) {
