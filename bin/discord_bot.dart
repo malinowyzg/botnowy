@@ -10,7 +10,7 @@ void main() async{
     );
 
     final bot = await client.users.fetchCurrentUser();
-    print("✅ Bot Online");
+    print("✅ Bot Aktywny!");
 
     client.onMessageCreate.listen((event) async{
       if(event.mentions.contains(bot)) {
@@ -24,10 +24,10 @@ void main() async{
    // Fake Web Server to Keep Render Alive
   var port = int.tryParse(Platform.environment['PORT'] ?? '8080') ?? 8080;
   var server = await HttpServer.bind(InternetAddress.anyIPv4, port);
-  print("🌍 Fake server running on port $port");
+  print("🌍 Asystent Uruchomiony Prawidłowo! $port");
   await for (var request in server) {
     request.response
-      ..write("Bot is running!")
+      ..write("https://media.discordapp.net/attachments/1199742339632091247/1351934534119329932/LOGODC.png?ex=6805b5e6&is=68046466&hm=4d7575eb77a86490147f81aaa4648e9adc3e92d14c48ea47ad6c41dc0b45cd4e&=&format=webp&quality=lossless")
       ..close();
   }
 }
